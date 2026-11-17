@@ -89,7 +89,7 @@ function directionCheck(input, kind, facts) {
     if (!AR.test(text)) return;
     if (/[,;?]/.test(text.replace(/\d,\d/g, '0'))) add(line, 'punct', 'علامة ترقيم لاتينية في نص عربي: استخدم ، أو ؛ أو ؟');
     if (/^\s*[؟،؛.!:]/.test(text)) add(line, 'lead', 'علامة ترقيم في أول السطر: مكانها آخر الجملة في الترتيب المخزَّن');
-    if (/\d\s+[-\u2013]\s+\d/.test(text)) add(line, 'range', 'نطاق بشرطة بين مسافتين ينقلب طرفاه: اكتب «من … إلى …»');
+    if (/\d\s+[-\u2013]\s+\d/.test(text)) add(line, 'range', 'نطاق بشرطة بين مسافتين يلتبس أوله بآخره: اكتب «من … إلى …»');
     if (/[٠-٩]/.test(text)) add(line, 'digits', 'أرقام عربية مشرقية في مستند أرقامه 0 إلى 9: وحّد الأرقام');
     var signs = /(^|[\s(:])([+\-\u2212]\d)/g, m;
     while ((m = signs.exec(text))) {
