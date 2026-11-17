@@ -5,7 +5,7 @@ Arabic Writing, Translation and Dialect Work with AI
 
 مسار الطلاقة في البيانات والذكاء الاصطناعي · أكاديمية سدايا · USE-FLU-207 · المستوى 200
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+تضبط المستوى اللغوي لما يكتبه المساعد بالعربية، وتتحكم في ترجمته بمسرد، وتقابل الأسماء والأرقام والتواريخ بالمصدر، وتعرف أين تقف اللهجات والنص ثنائي الاتجاه خارج ما يُعتمد عليه دون مراجع
 
 ينتج المشاركون أعمالًا عربية بمساعدات الذكاء الاصطناعي ويتحققون منها: الخطابات الرسمية، وملخصات التقارير الإنجليزية، والنصوص ثنائية اللغة، والنصوص المفرّغة للهجات. ويضبطون المستوى اللغوي للعربية الرسمية والعربية المبسطة، ويتحكمون في الترجمة في الاتجاهين بمسرد مصطلحات، ويقارنون بين مساعدين، ويحددون مواضع إخفاق المخرجات باللهجات، ويتحققون من الأسماء والأرقام والتواريخ الهجرية والميلادية بمقارنتها بالمصدر، ويصلحون أخطاء النص ثنائي الاتجاه. وتتحقق مهمة متابعة متعقَّبة من مستند حقيقي واحد.
 
@@ -29,7 +29,7 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| اليوم 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4; REPLACE: عنوان الجلسة 5; REPLACE: عنوان الجلسة 6 | [`slides/day1.html`](slides/day1.html) |
+| اليوم 1 | العربية مع المساعد: اضبط وقابل وراجع | المستوى اللغوي قبل الصياغة; المسرد يضبط الترجمة; الأسماء والأرقام والتواريخ أمام المصدر; اللهجات وحدود المساعدين; النص في اتجاهين; قبل أن يحمل النص اسمك | [`slides/day1.html`](slides/day1.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -43,12 +43,12 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | اليوم 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`D1_1.html`](labs/D1_1.html) |
-| 1.2 | اليوم 1 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 1.2 | [`D1_2.html`](labs/D1_2.html) |
-| 1.3 | اليوم 1 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 1.3 | [`D1_3.html`](labs/D1_3.html) |
-| 1.4 | اليوم 1 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 1.4 | [`D1_4.html`](labs/D1_4.html) |
-| 1.5 | اليوم 1 · الجلسة 5 | REPLACE: ما يبنيه المشاركون في المختبر 1.5 | [`D1_5.html`](labs/D1_5.html) |
-| 1.6 | اليوم 1 · الجلسة 6 | REPLACE: ما يبنيه المشاركون في المختبر 1.6 | [`D1_6.html`](labs/D1_6.html) |
+| 1.1 | اليوم 1 · الجلسة 1 | خطاب وإشعار بمستويين لغويين | [`D1_1_letter_and_notice.html`](labs/D1_1_letter_and_notice.html) |
+| 1.2 | اليوم 1 · الجلسة 2 | ترجمة يضبطها المسرد في الاتجاهين | [`D1_2_glossary_translation.html`](labs/D1_2_glossary_translation.html) |
+| 1.3 | اليوم 1 · الجلسة 3 | صيد الأخطاء في ثلاثة مخرجات | [`D1_3_error_hunt.html`](labs/D1_3_error_hunt.html) |
+| 1.4 | اليوم 1 · الجلسة 4 | مساعدان على خمس مهام | [`D1_4_two_assistants.html`](labs/D1_4_two_assistants.html) |
+| 1.5 | اليوم 1 · الجلسة 5 | إصلاح أخطاء الاتجاه المدسوسة | [`D1_5_fix_direction.html`](labs/D1_5_fix_direction.html) |
+| 1.6 | اليوم 1 · الجلسة 6 | تجربة مهمة المتابعة على إشعار ثنائي اللغة | [`D1_6_followup_rehearsal.html`](labs/D1_6_followup_rehearsal.html) |
 <!-- /academy:labs -->
 
 ## المتطلبات السابقة
@@ -69,7 +69,32 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [سدايا: مبادئ الذكاء الاصطناعي التوليدي للعموم](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenerativeAIPublicAR.pdf)
+- [سدايا: معجم البيانات والذكاء الاصطناعي، إنجليزي عربي، الطبعة الثانية 2024](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/SDAIAPublications15.pdf)
+- [تقويم أم القرى الرسمي](https://www.ummulqura.org.sa/)
+- [سدايا: صفحة الأنظمة والسياسات](https://sdaia.gov.sa/ar/SDAIA/about/Pages/RegulationsAndPolicies.aspx)
+
+### النص ثنائي الاتجاه
+
+- [Unicode Standard Annex #9: Unicode Bidirectional Algorithm](https://www.unicode.org/reports/tr9/)
+- [Notepad++ User Manual: Views (Show Symbol, Text Direction)](https://npp-user-manual.org/docs/views/)
+- [Visual Studio Code 1.63 release notes: Unicode highlighting](https://code.visualstudio.com/updates/v1_63)
+
+### اللهجات والتفريغ النصي
+
+- [Wang et al.: Open Universal Arabic ASR Leaderboard](https://arxiv.org/abs/2412.13788)
+- [Talafha et al.: Casablanca: Data and Models for Multidialectal Arabic Speech Recognition](https://arxiv.org/abs/2410.04527)
+- [OpenAI: Whisper (the repository)](https://github.com/openai/whisper)
+
+### الترجمة والمسارد
+
+- [ISO 17100:2015 Translation services: Requirements for translation services](https://www.iso.org/standard/59149.html)
+- [ISO 18587:2017 Translation services: Post-editing of machine translation output](https://www.iso.org/standard/62970.html)
+- [OmegaT: the free translation memory tool](https://omegat.org/)
+- [HUMAIN: ALLaM-7B-Instruct-preview (model card)](https://huggingface.co/humain-ai/ALLaM-7B-Instruct-preview)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية
