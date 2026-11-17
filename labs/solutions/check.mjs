@@ -170,7 +170,7 @@ const LABS = {
     equal(R.directionCheck(sol('slide_bidi_fixed.html'), 'slide', F.slide_facts), [], 'the fixed slide');
     const page = read('direction_check.html');
     truthy(page.includes(R.directionCheck.toString()), 'the page runs the same rules as this check');
-    truthy(!/[‪-‮⁦-⁩‎‏]/.test(page), 'the page holds no invisible character itself');
+    truthy(!/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/.test(page), 'the page holds no invisible character itself');
     return `document ${d.length} findings then 0; slide ${s.length} findings then 0; the page files/direction_check.html holds the same function`;
   },
 
