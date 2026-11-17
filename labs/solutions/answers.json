@@ -1,0 +1,383 @@
+{
+  "about": "مفاتيح الحلول المرجعية التي يثبّتها check.mjs. كل رقم هنا تقتبسه الشرائح أو صفحات المختبرات: إن تغيّر ملف أخفق الفحص إلى أن تُحدَّث.",
+  "forms": {
+    "1": {
+      "ar": [
+        "مصيد",
+        "مصيدا"
+      ],
+      "en": [
+        "catches"
+      ]
+    },
+    "2": {
+      "ar": [
+        "بلاغات المصيد"
+      ],
+      "en": [
+        "catch reports"
+      ]
+    },
+    "3": {
+      "ar": [
+        "مواقع الإنزال",
+        "موقع إنزال"
+      ],
+      "en": [
+        "landing sites"
+      ]
+    },
+    "4": {
+      "ar": [],
+      "en": []
+    },
+    "5": {
+      "ar": [
+        "مصيد عرضي",
+        "مصيدا عرضيا"
+      ],
+      "en": []
+    },
+    "6": {
+      "ar": [
+        "رخص الصيد"
+      ],
+      "en": [
+        "fishing licences"
+      ]
+    },
+    "7": {
+      "ar": [
+        "قوارب الصيد",
+        "قارب صيد"
+      ],
+      "en": [
+        "fishing vessels"
+      ]
+    },
+    "8": {
+      "ar": [
+        "حصة"
+      ],
+      "en": [
+        "quotas"
+      ]
+    },
+    "9": {
+      "ar": [],
+      "en": [
+        "fish stocks"
+      ]
+    },
+    "10": {
+      "ar": [
+        "صياد حرفي",
+        "الصيادين الحرفيين",
+        "الصيادون الحرفيون"
+      ],
+      "en": [
+        "artisanal fishers"
+      ]
+    },
+    "11": {
+      "ar": [],
+      "en": [
+        "landing inspectors"
+      ]
+    },
+    "12": {
+      "ar": [
+        "جمعية تعاونية للصيادين"
+      ],
+      "en": [
+        "fishers' cooperative societies"
+      ]
+    },
+    "13": {
+      "ar": [
+        "مجموعة بيانات",
+        "مجموعات البيانات"
+      ],
+      "en": [
+        "datasets",
+        "data set",
+        "data sets"
+      ]
+    },
+    "14": {
+      "ar": [],
+      "en": []
+    },
+    "15": {
+      "ar": [],
+      "en": []
+    },
+    "16": {
+      "ar": [
+        "نموذج تنبؤي"
+      ],
+      "en": [
+        "predictive models"
+      ]
+    },
+    "17": {
+      "ar": [],
+      "en": []
+    },
+    "18": {
+      "ar": [],
+      "en": []
+    },
+    "19": {
+      "ar": [
+        "بيانات شخصية"
+      ],
+      "en": []
+    },
+    "20": {
+      "ar": [],
+      "en": []
+    }
+  },
+  "lab_1_1": {
+    "scores": [
+      1,
+      10,
+      1,
+      10
+    ],
+    "letter_calques": [
+      "يلعب دورًا",
+      "تم + مصدر",
+      "من قبل",
+      "لا تتردد في",
+      "نأمل أن تجدكم هذه الرسالة بخير",
+      "بشكل + صفة"
+    ]
+  },
+  "lab_1_2": {
+    "tallies": [
+      "4/10",
+      "9/10",
+      "3/13",
+      "13/13"
+    ],
+    "miss_with_glossary": [
+      "7:3"
+    ],
+    "national": [
+      13,
+      15,
+      16,
+      17,
+      20
+    ],
+    "national_tallies": [
+      "2/5",
+      "5/5"
+    ],
+    "reference_en": {
+      "5": "The landing inspector verifies the catch report before the vessel leaves, and compares the recorded weight with the actual weight for a sample of vessels each day.",
+      "6": "During the closed season a catch report is not accepted if it includes the prohibited species, unless it is bycatch of no more than 5 kg per trip.",
+      "7": "Every quantity landed at the landing site counts against the quota, and the holder of the fishing licence is notified when 80% of the quota is reached.",
+      "8": "The Authority measures data quality in every dataset each month and returns incomplete reports to their owners for correction within 7 days."
+    }
+  },
+  "lab_1_3": {
+    "planted": [
+      {
+        "id": "E1",
+        "output": "O1",
+        "kind": "اسم",
+        "wrong": "رزان المسند، مديرة",
+        "right": "Razeen Al-Musnad",
+        "fix": "د. رزين المسند، مدير تقييم المخزون (والنص يقول he)"
+      },
+      {
+        "id": "E2",
+        "output": "O1",
+        "kind": "رقم",
+        "wrong": "1,690",
+        "right": "1,960",
+        "fix": "1,960 طنًّا"
+      },
+      {
+        "id": "E3",
+        "output": "O1",
+        "kind": "وحدة",
+        "wrong": "12 كيلومترًا",
+        "right": "12 nautical miles (22.2 km)",
+        "fix": "12 ميلًا بحريًّا (22.2 كم)"
+      },
+      {
+        "id": "E4",
+        "output": "O1",
+        "kind": "محذوف",
+        "wrong": "لكل الصيادين الحرفيين",
+        "right": "only to artisanal fishers who held a valid fishing licence on 1 July 2027",
+        "fix": "لمن كانت رخصته سارية في 1 يوليو 2027 فقط"
+      },
+      {
+        "id": "E5",
+        "output": "O2",
+        "kind": "تاريخ",
+        "wrong": "30 ربيع الآخر 1449",
+        "right": "1 September",
+        "fix": "1 سبتمبر 2027 يوافق 30 ربيع الأول 1449 هـ، والمصدر لم يذكر تاريخًا هجريًّا"
+      },
+      {
+        "id": "E6",
+        "output": "O2",
+        "kind": "رقم",
+        "wrong": "24%",
+        "right": "42%",
+        "fix": "42%"
+      },
+      {
+        "id": "E7",
+        "output": "O2",
+        "kind": "محذوف",
+        "wrong": "يجوز للقوارب إنزال الكنعد",
+        "right": "Vessels may not land kingfish",
+        "fix": "لا يجوز للقوارب إنزال الكنعد: سقط النفي"
+      },
+      {
+        "id": "E8",
+        "output": "O2",
+        "kind": "وحدة",
+        "wrong": "100 سم",
+        "right": "100 mm",
+        "fix": "100 ملم"
+      },
+      {
+        "id": "E9",
+        "output": "O3",
+        "kind": "تاريخ",
+        "wrong": "Saturday, 30 October 2027",
+        "right": "الأحد 31 أكتوبر 2027",
+        "fix": "Sunday, 31 October 2027 (1 Jumada al-Akhirah 1449 AH)"
+      },
+      {
+        "id": "E10",
+        "output": "O3",
+        "kind": "اسم",
+        "wrong": "Sail Fisheries Authority",
+        "right": "Shira Fisheries Authority",
+        "fix": "Shira Fisheries Authority: اسم العلم لا يُترجم"
+      }
+    ],
+    "o2_new_numbers": [
+      "24",
+      "30",
+      "1449"
+    ],
+    "reference_first_pass": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E6",
+      "E7",
+      "E8",
+      "E10"
+    ]
+  },
+  "lab_1_4": {
+    "measures": {
+      "a": [
+        10,
+        5,
+        13,
+        13.8,
+        1
+      ],
+      "b": [
+        7,
+        10,
+        11,
+        44.8,
+        0
+      ]
+    },
+    "scores": {
+      "a": [
+        2,
+        0,
+        2,
+        1,
+        1
+      ],
+      "b": [
+        1,
+        2,
+        1,
+        0,
+        2
+      ]
+    },
+    "meaning_right": {
+      "a": false,
+      "b": true
+    },
+    "keywords": [
+      "نوخذة",
+      "لنج",
+      "القراقير",
+      "أهدّه",
+      "يبدي",
+      "مال"
+    ],
+    "neither": [
+      4
+    ]
+  },
+  "lab_1_5": {
+    "doc_facts": [
+      "2027",
+      "5,000",
+      "SFA-2027-014"
+    ],
+    "slide_facts": [
+      "1,250",
+      "5,000",
+      "1,960",
+      "SFA-2027-014"
+    ],
+    "doc_findings": [
+      "2:control",
+      "2:control",
+      "3:fact",
+      "8:first",
+      "9:punct",
+      "10:lead",
+      "12:range",
+      "13:fact",
+      "14:sign",
+      "15:digits"
+    ],
+    "slide_findings": [
+      "2:dir",
+      "23:control",
+      "23:control",
+      "24:ltr-arabic",
+      "25:fact",
+      "26:latin",
+      "27:punct",
+      "27:sign",
+      "32:sign"
+    ]
+  },
+  "lab_1_6": {
+    "quote_word": "أهدّه",
+    "draft": {
+      "calques": 2,
+      "terms": 2,
+      "dates": 1,
+      "numbers": 1,
+      "quote": 1,
+      "direction": 1,
+      "disclosure": 1
+    },
+    "decision": "إحالة"
+  }
+}

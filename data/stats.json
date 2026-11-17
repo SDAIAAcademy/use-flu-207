@@ -1,0 +1,509 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-17T13:42:49Z",
+    "version": "2027.1.0",
+    "commit": "5e17ce5"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "totals": {
+    "decks": 1,
+    "slides": 67,
+    "words": 4705,
+    "notes": 61,
+    "notes_ratio": 0.91,
+    "activities": 6,
+    "styles": 8,
+    "slide_minutes": null,
+    "components": {
+      "cards": 38,
+      "pills": 0,
+      "callouts": 32,
+      "tables": 18,
+      "code": 0,
+      "tokens": 0,
+      "flows": 2,
+      "stats": 3,
+      "bars": 2,
+      "meters": 0,
+      "agendas": 1,
+      "quizzes": 6,
+      "checklists": 6,
+      "prompts": 3,
+      "chats": 2,
+      "tools": 0,
+      "traces": 0,
+      "ladders": 0,
+      "figures": 0,
+      "matrices": 0,
+      "timers": 0,
+      "columns": 29,
+      "images": 0,
+      "drawings": 0,
+      "fragments": 7
+    },
+    "minutes": 330
+  },
+  "decks": [
+    {
+      "deck": "day1",
+      "kind": "day",
+      "label": "اليوم 1",
+      "title": "العربية مع المساعد: اضبط وقابل وراجع",
+      "slides": 67,
+      "words": 4705,
+      "notes": 61,
+      "notes_ratio": 0.91,
+      "activities": 6,
+      "styles": 8,
+      "slide_minutes": null,
+      "components": {
+        "cards": 38,
+        "pills": 0,
+        "callouts": 32,
+        "tables": 18,
+        "code": 0,
+        "tokens": 0,
+        "flows": 2,
+        "stats": 3,
+        "bars": 2,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 6,
+        "checklists": 6,
+        "prompts": 3,
+        "chats": 2,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 29,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 7
+      },
+      "minutes": 330,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "المستوى اللغوي قبل الصياغة",
+          "slides": 10,
+          "words": 718,
+          "notes": 9,
+          "notes_ratio": 0.9,
+          "activities": 1,
+          "styles": 4,
+          "slide_minutes": null,
+          "components": {
+            "cards": 4,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 1,
+            "bars": 1,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 1,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 4,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "المسرد يضبط الترجمة",
+          "slides": 10,
+          "words": 670,
+          "notes": 9,
+          "notes_ratio": 0.9,
+          "activities": 1,
+          "styles": 4,
+          "slide_minutes": null,
+          "components": {
+            "cards": 2,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 0,
+            "bars": 1,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 1,
+            "chats": 1,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 2,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 7
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        },
+        {
+          "n": 3,
+          "label": "الجلسة 3",
+          "title": "الأسماء والأرقام والتواريخ أمام المصدر",
+          "slides": 10,
+          "words": 678,
+          "notes": 9,
+          "notes_ratio": 0.9,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 8,
+            "pills": 0,
+            "callouts": 4,
+            "tables": 4,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 6,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        },
+        {
+          "n": 4,
+          "label": "الجلسة 4",
+          "title": "اللهجات وحدود المساعدين",
+          "slides": 10,
+          "words": 730,
+          "notes": 9,
+          "notes_ratio": 0.9,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 8,
+            "pills": 0,
+            "callouts": 4,
+            "tables": 3,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 1,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        },
+        {
+          "n": 5,
+          "label": "الجلسة 5",
+          "title": "النص في اتجاهين",
+          "slides": 10,
+          "words": 791,
+          "notes": 9,
+          "notes_ratio": 0.9,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 6,
+            "pills": 0,
+            "callouts": 4,
+            "tables": 3,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 2,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        },
+        {
+          "n": 6,
+          "label": "الجلسة 6",
+          "title": "قبل أن يحمل النص اسمك",
+          "slides": 12,
+          "words": 821,
+          "notes": 11,
+          "notes_ratio": 0.92,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 7,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 3,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 1,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 55,
+          "lab_minutes": 30
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "id": "LO1",
+      "text": "يعدّ طلبات تحدد المستوى اللغوي والنبرة والجمهور والمصطلحات للعربية الرسمية والعربية المبسطة، استنادًا إلى خطاب وإشعار عام اصطناعيين",
+      "level": "Applied",
+      "slides": [
+        "day1#reg-two-readers",
+        "day1#reg-four-fields",
+        "day1#reg-letter-conventions",
+        "day1#reg-plain-notice",
+        "day1#reg-translated-arabic",
+        "day1#reg-before-after",
+        "day1#reg-form-not-truth",
+        "day1#check-register"
+      ],
+      "activities": [
+        "day1#check-register-q1"
+      ],
+      "sessions": [
+        "day1/1"
+      ],
+      "labs": [
+        "1.1"
+      ],
+      "questions": [
+        "q-lo1-plain-notice",
+        "q-lo1-letter-score",
+        "q-lo1-translated"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO2",
+      "text": "يصوغ مسردًا ثنائي اللغة ويستخدمه للتحكم في ترجمة يولدها الذكاء الاصطناعي في الاتجاهين، استنادًا إلى نص سياسة اصطناعي من ثلاث صفحات",
+      "level": "Applied",
+      "slides": [
+        "day1#gl-terms-drift",
+        "day1#gl-what-is",
+        "day1#gl-build-first",
+        "day1#gl-prompt",
+        "day1#gl-sample-check",
+        "day1#gl-back-translation",
+        "day1#gl-both-ways",
+        "day1#check-glossary"
+      ],
+      "activities": [
+        "day1#check-glossary-q1"
+      ],
+      "sessions": [
+        "day1/2"
+      ],
+      "labs": [
+        "1.2"
+      ],
+      "questions": [
+        "q-lo2-first-draft",
+        "q-lo2-sample-check",
+        "q-lo2-national"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO3",
+      "text": "يختبر الترجمات والملخصات التي يولدها الذكاء الاصطناعي بمقارنتها بالمصدر بحثًا عن الأسماء والأرقام والتواريخ والوحدات الخاطئة والمحذوفات، على ثلاثة مخرجات فيها عشرة أخطاء مدسوسة",
+      "level": "Applied",
+      "slides": [
+        "day1#src-five-kinds",
+        "day1#src-names",
+        "day1#src-numbers-units",
+        "day1#src-dates",
+        "day1#src-date-not-source",
+        "day1#src-omissions",
+        "day1#src-five-passes",
+        "day1#check-source",
+        "day1#own-identifiers",
+        "day1#own-log",
+        "day1#own-six-problems"
+      ],
+      "activities": [
+        "day1#check-source-q1"
+      ],
+      "sessions": [
+        "day1/3",
+        "day1/6"
+      ],
+      "labs": [
+        "1.3",
+        "1.6"
+      ],
+      "questions": [
+        "q-lo3-unit",
+        "q-lo3-date",
+        "q-lo3-omission",
+        "q-lo3-first-pass"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO4",
+      "text": "يحلل أداء مساعدين على المهام العربية نفسها، ويوثّق المواضع التي لا يصلح فيها أي منهما دون مراجع أو مترجم من أهل اللغة، على خمس مهام منها التفريغ النصي للهجات",
+      "level": "Applied",
+      "slides": [
+        "day1#dia-msa-and-dialects",
+        "day1#dia-voice-note",
+        "day1#dia-two-failures",
+        "day1#dia-verbatim-or-msa",
+        "day1#dia-respect",
+        "day1#dia-fair-comparison",
+        "day1#dia-tie",
+        "day1#check-dialect",
+        "day1#own-when-translator",
+        "day1#own-policy-article",
+        "day1#own-disclosure",
+        "day1#own-six-problems",
+        "day1#check-own"
+      ],
+      "activities": [
+        "day1#check-dialect-q1",
+        "day1#check-own-q1"
+      ],
+      "sessions": [
+        "day1/4",
+        "day1/6"
+      ],
+      "labs": [
+        "1.4",
+        "1.6"
+      ],
+      "questions": [
+        "q-lo4-fair",
+        "q-lo4-verbatim",
+        "q-lo4-neither"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO5",
+      "text": "يحلل أخطاء النص ثنائي الاتجاه، مثل الأرقام المعكوسة وعلامات الترقيم في غير موضعها، ويصلحها، على مستند وشريحة عرض فيهما أخطاء مدسوسة",
+      "level": "Applied",
+      "slides": [
+        "day1#bidi-stored-shown",
+        "day1#bidi-three-kinds",
+        "day1#bidi-what-jumps",
+        "day1#bidi-two-reversals",
+        "day1#bidi-marks",
+        "day1#bidi-where",
+        "day1#bidi-check",
+        "day1#check-direction",
+        "day1#own-six-problems"
+      ],
+      "activities": [
+        "day1#check-direction-q1"
+      ],
+      "sessions": [
+        "day1/5",
+        "day1/6"
+      ],
+      "labs": [
+        "1.5",
+        "1.6"
+      ],
+      "questions": [
+        "q-lo5-phone",
+        "q-lo5-first-strong",
+        "q-lo5-slide"
+      ],
+      "covered": true
+    }
+  ]
+}

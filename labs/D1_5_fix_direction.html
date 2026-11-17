@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.5 · إصلاح أخطاء الاتجاه المدسوسة · الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_5_fix_direction.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-5">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.5</span>
+<h1>إصلاح أخطاء الاتجاه المدسوسة</h1>
+<p>تصلح تعميمًا نصيًّا وشريحة عرض فيهما أخطاء اتجاه مدسوسة: أرقام معكوسة، وعلامات ترقيم في غير موضعها، ومقاطع لاتينية غير معزولة، حتى يجتاز الملفان فحص الاتجاه.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 1</span><span>الجلسة 5: النص في اتجاهين</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.5">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>تعميم نصي وشريحة عرض أصلحت فيهما أخطاء الاتجاه المدسوسة، ويجتازان فحص الاتجاه دون ملاحظات.</li>
+    <li>قائمة بما أصلحته: ما كان مخزَّنًا خطأ فأعدت كتابته، وما كان يُعرض خطأ فحذفت علامته أو عزلته.</li>
+  </ul>
+</div>
+
+<div class="callout tip"><b>الذكاء الاصطناعي هنا: يشرح ولا يصلح.</b> لك أن تسأل المساعد عن معنى علامة أو قاعدة. لا تلصق الملف فيه ليصلحه: المساعدات تُسقط العلامات غير المرئية عند النسخ أو تضيف غيرها، والفحص يقرأ الحروف المخزَّنة.</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/circular_bidi.txt" download><b>circular_bidi.txt</b><span>تعميم نصي من ستة عشر سطرًا فيه عشر ملاحظات. نزّله وافتحه في المحرر.</span></a>
+  <a href="files/slide_bidi.html" download><b>slide_bidi.html</b><span>شريحة واحدة فيها تسع ملاحظات. افتحها في المتصفح لتراها، وفي المحرر لتصلحها.</span></a>
+  <a href="files/direction_check.html"><b>direction_check.html</b><span>فحص الاتجاه: صفحة تعمل في المتصفح دون اتصال، تفتح فيها ملفك أو تلصق نصه.</span></a>
+</div>
+<p>المحرر: Notepad++ (من قائمة <span class="ltr">View</span> ثم <span class="ltr">Show Symbol</span> ثم <span class="ltr">Show All Characters</span>)، أو Visual Studio Code، وهو يحيط الحروف غير المرئية بإطار.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · افتح الملفين وشغّل فحص الاتجاه واقرأ القائمة <span class="min">4 د</span></h3>
+  <p>افتح الشريحة في المتصفح أولًا وانظر: أين الخطأ الذي تراه عينك؟ ثم افتح كل ملف في صفحة الفحص. القائمة تذكر السطر والقاعدة، وتُظهر العلامات غير المرئية بأسمائها بين قوسين مربعين.</p>
+</div>
+
+<div class="step">
+  <h3>2 · أصلح علامات التحكم والأرقام المعكوسة في التعميم <span class="min">8 د</span></h3>
+  <p>في التعميم رقمان يظهران معكوسين، ولكل منهما علاج غير علاج الآخر:</p>
+  <ul>
+    <li><b>السطر 2:</b> رقم التعميم مخزَّن سليمًا، وحوله علامة تجاوز <span class="ltr">RLO</span> تعكس عرضه. احذف السطر كله واكتبه من جديد: <span class="ltr">SFA-2027-014</span> بعد «تعميم رقم».</li>
+    <li><b>السطران 3 و13:</b> السنة والغرامة مخزَّنتان معكوستين، كما يحدث عند النسخ من ملف مصوَّر. أعد كتابة الرقمين: 2027 و5,000.</li>
+    <li><b>السطر 15:</b> أرقام مشرقية في مستند أرقامه 0 إلى 9. وحّدها: 1,250.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>3 · أصلح الترقيم والنطاق ورقم الهاتف في التعميم <span class="min">6 د</span></h3>
+  <ul>
+    <li><b>السطر 8:</b> يبدأ بحرف لاتيني فيُعرض كله من اليسار في أي نموذج أو رسالة. ابدأه بكلمة عربية.</li>
+    <li><b>السطر 9:</b> فاصلة لاتينية. اكتب «،».</li>
+    <li><b>السطر 10:</b> علامة الاستفهام مخزَّنة في أول الجملة. انقلها إلى آخرها.</li>
+    <li><b>السطر 12:</b> نطاق بشرطة بين مسافتين: يظهر 120 في يسار السطر و100 في يمينه، فلا يُعرف أي الطرفين البداية. اكتب «من 100 إلى 120».</li>
+    <li><b>السطر 14:</b> رقم الهاتف تقفز إشارته. انسخ علامة <span class="ltr">LRM</span> من صفحة الفحص والصقها قبل علامة الجمع مباشرة.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>4 · أصلح الشريحة: اتجاه الصفحة وعزل المقاطع اللاتينية <span class="min">8 د</span></h3>
+  <p>في الصفحات والشرائح لا تُستخدم العلامات غير المرئية: الاتجاه سمة على العنصر.</p>
+  <ul>
+    <li>أضف <code>dir="rtl"</code> إلى العنصر <code>html</code> في السطر 2.</li>
+    <li>السطر 23: احذف علامتي التحكم حول «12 ميلًا بحريًّا» بإعادة كتابة العبارة.</li>
+    <li>السطر 24: العنصر <code>dir="ltr"</code> يحيط بالرقم وكلمة «ريال» معًا. أخرج الكلمة العربية منه.</li>
+    <li>السطر 25: أعد كتابة 1,250.</li>
+    <li>السطر 26: ضع الحرف <span class="ltr">B</span> في <code>&lt;span dir="ltr"&gt;</code>.</li>
+    <li>السطر 27: علامة استفهام عربية، ورقم الهاتف في <code>&lt;span dir="ltr"&gt;</code>.</li>
+    <li>السطر 32: النسبة بإشارتها في <code>&lt;span dir="ltr"&gt;</code>.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>5 · أعد الفحص حتى يجتازه الملفان <span class="min">4 د</span></h3>
+  <p>احفظ بترميز <span class="ltr">UTF-8</span> وافتح كل ملف في صفحة الفحص من جديد. النتيجة المطلوبة: «الملف يجتاز فحص الاتجاه». ثم افتح الشريحة في المتصفح وقارنها بما رأيته في الخطوة 1.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>انسخ جدول المؤشرات من الشريحة إلى جدول بيانات، واضبط اتجاه الورقة من اليمين إلى اليسار، وسجّل ما تغيّر في موضع العمودين وفي إشارة النسبة.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>رقمان ظهرا معكوسين في التعميم. أيهما كان خطأ في التخزين وأيهما في العرض؟ وكيف عرفت؟</li>
+  <li>لماذا لم نستخدم علامة <span class="ltr">LRM</span> في الشريحة كما استخدمناها في التعميم النصي؟</li>
+  <li>الملف اجتاز الفحص. ما الذي لم يفحصه الفحص وما زال عليك أن تراه بعينك في البرنامج الذي سيُعرض فيه؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل المرجعي: <code>labs/solutions/D1_5_fix_direction.md</code>، والملفان المصلَحان <code>labs/solutions/circular_bidi_fixed.txt</code> و<code>labs/solutions/slide_bidi_fixed.html</code>.</li>
+    <li>التعميم: عشر ملاحظات في تسعة أسطر (السطر 2 فيه علامتان). الشريحة: تسع ملاحظات (السطر 23 فيه علامتان، والسطر 27 فيه قاعدتان). بعد الإصلاح: صفر في الملفين.</li>
+    <li>أصعب خطوة حذف علامة لا تُرى. الأسلم إعادة كتابة السطر كله، لا محاولة وضع المؤشر عندها. من يستخدم Visual Studio Code يرى العلامة في إطار ويحذفها مباشرة.</li>
+    <li>المحرر القديم قد يحفظ بترميز غير <span class="ltr">UTF-8</span> فتفسد الحروف العربية كلها: نبّه قبل الخطوة 5.</li>
+    <li>الفحص يقرأ الحروف المخزَّنة ولا يرى العرض: برنامج العروض أو البريد قد يعرض الملف السليم خطأ إذا كان اتجاه الفقرة فيه من اليسار. هذا جواب السؤال الثالث.</li>
+    <li>الشريحة صفحة <span class="ltr">HTML</span> لا ملف عروض: القواعد واحدة، وفي برنامج العروض يقابل السمة <code>dir</code> زر اتجاه الفقرة من اليمين إلى اليسار.</li>
+    <li>صفحة الفحص والحل المرجعي يشغّلان الدالة نفسها، و<code>check.mjs 1.5</code> يثبت ذلك.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_4_two_assistants.html" rel="prev">→ المختبر السابق</a><a href="D1_6_followup_rehearsal.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 5e17ce5</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T13:42:49Z","version":"2027.1.0","commit":"5e17ce5"},"course":{"id":"use-flu-207","code":"USE-FLU-207","title":"الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-flu-207/","repo":"SDAIAAcademy/use-flu-207","home":"../index.html"},"lab":{"id":"1.5","title":"إصلاح أخطاء الاتجاه المدسوسة","summary":"تصلح تعميمًا نصيًّا وشريحة عرض فيهما أخطاء اتجاه مدسوسة: أرقام معكوسة، وعلامات ترقيم في غير موضعها، ومقاطع لاتينية غير معزولة، حتى يجتاز الملفان فحص الاتجاه.","minutes":30,"day":1,"unit":"اليوم 1","session":5,"deck":"../slides/day1.html#lab-1-5","prev":"D1_4_two_assistants.html","next":"D1_6_followup_rehearsal.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

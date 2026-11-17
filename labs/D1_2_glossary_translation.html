@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · ترجمة يضبطها المسرد في الاتجاهين · الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_glossary_translation.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>ترجمة يضبطها المسرد في الاتجاهين</h1>
+<p>تصوغ مسردًا من 20 مصطلحًا لسياسة الإبلاغ الإلكتروني عن المصيد، وتترجم بها صفحة إلى الإنجليزية ومذكرة إلى العربية، وتفحص مطابقة الترجمة للمسرد بالعينة.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: المسرد يضبط الترجمة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>مسرد من 20 مصطلحًا لسياسة الإبلاغ الإلكتروني عن المصيد، كتبت مسودته بنفسك ثم طابقتها بالمعتمد.</li>
+    <li>ترجمة للصفحة 2 إلى الإنجليزية وترجمة لمذكرة الشريك إلى العربية، ونتيجة فحص مطابقتهما للمسرد بالعينة.</li>
+  </ul>
+</div>
+
+<div class="callout warn"><b>الخطوة 1 دون مساعد.</b> المسودة الأولى للمسرد تكتبها أنت من قراءتك للسياسة. بعدها الذكاء الاصطناعي مسموح كاملًا في الترجمة، والفحص بالمسرد عليك.</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/policy_catch_reporting_ar.html"><b>policy_catch_reporting_ar.html</b><span>السياسة: ثلاث صفحات واثنتا عشرة مادة.</span></a>
+  <a href="files/glossary_sheet.html"><b>glossary_sheet.html</b><span>ورقة المسرد: عشرون مصطلحًا، وجدول فحص المطابقة.</span></a>
+  <a href="files/glossary_approved.html"><b>glossary_approved.html</b><span>المسرد المعتمد من المترجمة رباب السنبل. لا تفتحه قبل الخطوة 2.</span></a>
+  <a href="files/glossary_shiraa.txt"><b>glossary_shiraa.txt</b><span>المسرد نفسه نصًّا مفصولًا بعلامات الجدولة: تلصقه في الأمر، ويقرؤه برنامج مسارد مثل OmegaT.</span></a>
+  <a href="files/partner_note_en.html"><b>partner_note_en.html</b><span>مذكرة الشريك بالإنجليزية، من أربع فقرات.</span></a>
+  <a href="files/translation_sample.html"><b>translation_sample.html</b><span>أربع ترجمات معدّة: دون المسرد ومعه، في الاتجاهين. لمن لا يتاح له مساعد.</span></a>
+</div>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · دون مساعد: اكتب مقابلات المصطلحات العشرين <span class="min">8 د</span></h3>
+  <p>اقرأ الصفحات الثلاث، واكتب في ورقة المسرد المقابل الإنجليزي الذي تراه لكل مصطلح. ما لا تعرفه اتركه فارغًا: الفراغ معلومة.</p>
+</div>
+
+<div class="step">
+  <h3>2 · قارن مسودتك بالمسرد المعتمد وصحّح ما اختلف <span class="min">4 د</span></h3>
+  <p>افتح <code>glossary_approved.html</code>. انسخ المعتمد في عموده، وضع علامة عند ما اختلف. انتبه لسبعة مصطلحات مصدرها معجم البيانات والذكاء الاصطناعي الصادر عن سدايا: المعجم يكتب «تعلُّم الآلة» و«ترجمة الآلة» و«إخفاء بيانات الهوية».</p>
+</div>
+
+<div class="step">
+  <h3>3 · ترجم الصفحة 2 إلى الإنجليزية والمسرد في الأمر <span class="min">7 د</span></h3>
+  <p>الصق تحت الأمر محتوى <code>glossary_shiraa.txt</code> ثم المواد 5 إلى 8.</p>
+  <div class="prompt" data-tool="مساعد يدعم العربية">ترجم المواد أدناه من العربية إلى الإنجليزية لنص سياسة رسمي، بتهجئة بريطانية.
+التزم بالمسرد الآتي التزامًا تامًّا: كلما ورد المصطلح العربي فاكتب مقابله المذكور دون مرادف، ولو تكرر.
+إن وجدت مصطلحًا ليس في المسرد وتراه مصطلحًا فلا تختر له مقابلًا في صمت: ضعه في قائمة بعد الترجمة.
+لا تضف ولا تحذف، وأبقِ الأرقام والوحدات كما هي.
+المسرد: <span class="ph">الصق هنا</span>
+النص: <span class="ph">الصق المواد 5 إلى 8</span></div>
+  <p>إن لم يتح لك مساعد فاعمل على الترجمتين المعدّتين للصفحة 2.</p>
+</div>
+
+<div class="step">
+  <h3>4 · افحص عشرة مواضع بالعينة وسجّل المطابقة <span class="min">5 د</span></h3>
+  <p>في المواد 5 إلى 8 عشرة مواضع لمصطلحات المسرد. لكل موضع: هل في الترجمة المقابل المعتمد نفسه؟ سجّل «مطابق ____ من 10». لا تقرأ الترجمة قراءة عامة: ابحث عن المصطلح بعينه.</p>
+  <table>
+    <tr><th>المادة</th><th>المصطلحات في المصدر</th></tr>
+    <tr><td>5</td><td>مراقب الإنزال، بلاغ المصيد</td></tr>
+    <tr><td>6</td><td>موسم الحظر، بلاغ المصيد، المصيد العرضي</td></tr>
+    <tr><td>7</td><td>الحصة، موقع الإنزال، رخصة الصيد</td></tr>
+    <tr><td>8</td><td>جودة البيانات، مجموعة البيانات</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · ترجم مذكرة الشريك إلى العربية وافحص خمسة مواضع <span class="min">6 د</span></h3>
+  <p>الأمر نفسه في الاتجاه الآخر: من الإنجليزية إلى العربية الرسمية، والمسرد في الأمر. ثم افحص المصطلحات الخمسة المأخوذة من المعجم الوطني: <span class="ltr">dataset</span>، <span class="ltr">data anonymization</span>، <span class="ltr">machine learning</span>، <span class="ltr">predictive model</span>، <span class="ltr">machine translation</span>.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>اطلب في محادثة جديدة ترجمة عكسية للمادة 6 من ترجمتك الإنجليزية، وقابلها بالأصل العربي جملة بجملة. ماذا كشفت، وماذا لم تكشف؟</p>
+  <div class="prompt" data-tool="مساعد يدعم العربية">ترجم الجملة الإنجليزية الآتية إلى العربية ترجمة حرفية قدر الإمكان، دون تحسين: <span class="ph">الصق المادة 6 بالإنجليزية</span></div>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم مصطلحًا من العشرين اختلف مقابلك فيه عن المعتمد؟ وهل كان مقابلك خطأ أم مرادفًا مقبولًا في غير هذه الجهة؟</li>
+  <li>الترجمة التي أُعطيت المسرد: هل طابقته في المواضع العشرة كلها؟ ما الذي كان سيفوتك لو لم تفحص؟</li>
+  <li>الترجمة العكسية أعادت المعنى سليمًا. هل يثبت هذا أن المصطلحات مطابقة للمسرد؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل المرجعي: <code>labs/solutions/D1_2_glossary_translation.md</code>. الترجمات المعدّة: إلى الإنجليزية 4 من 10 دون المسرد و9 من 10 معه، وإلى العربية 3 من 13 دون المسرد و13 من 13 معه. المصطلحات الخمسة الوطنية: 2 من 5 ثم 5 من 5.</li>
+    <li>الموضع الوحيد الذي أخطأته الترجمة مع المسرد: المادة 7، كتبت <span class="ltr">landing point</span> بدل <span class="ltr">landing site</span>. هذا هو الدرس: تزويد المساعد بالمسرد يرفع المطابقة ولا يضمنها.</li>
+    <li>في الترجمة دون مسرد وردت <span class="ltr">share</span> و<span class="ltr">quota</span> للحصة في جملة واحدة: الفحص يعدّها مطابقة لأن المقابل المعتمد موجود، والقارئ يظنهما شيئين. اسأل القاعة عنها.</li>
+    <li>الترجمة العكسية للمادة 6 من النسخة دون مسرد تعود عربية سليمة المعنى، ولا تُظهر أن الإنجليزية خالفت المسرد في ثلاثة مصطلحات. الترجمة العكسية تكشف تغيّر المعنى، لا تبدّل المصطلح.</li>
+    <li>لم تُشغَّل هذه الأوامر على نموذج حقيقي عند إعداد المقرر. جرّبها على مساعد القاعة قبل كل دفعة، وسجّل كم موضعًا يخالف فيه المسرد.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_1_letter_and_notice.html" rel="prev">→ المختبر السابق</a><a href="D1_3_error_hunt.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 5e17ce5</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T13:42:49Z","version":"2027.1.0","commit":"5e17ce5"},"course":{"id":"use-flu-207","code":"USE-FLU-207","title":"الكتابة العربية والترجمة والعمل على اللهجات بالذكاء الاصطناعي","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-flu-207/","repo":"SDAIAAcademy/use-flu-207","home":"../index.html"},"lab":{"id":"1.2","title":"ترجمة يضبطها المسرد في الاتجاهين","summary":"تصوغ مسردًا من 20 مصطلحًا لسياسة الإبلاغ الإلكتروني عن المصيد، وتترجم بها صفحة إلى الإنجليزية ومذكرة إلى العربية، وتفحص مطابقة الترجمة للمسرد بالعينة.","minutes":30,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_letter_and_notice.html","next":"D1_3_error_hunt.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
