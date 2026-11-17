@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فحص الاتجاه</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "IBM Plex Sans Arabic", "IBM Plex Sans", "Segoe UI", Tahoma, sans-serif; background: #f6f4ef; color: #1c2330; line-height: 1.8; }
+  main { max-width: 820px; margin: 0 auto; padding: 18px 16px 48px; }
+  .doc { background: #fff; border: 1px solid #d9d5cb; border-radius: 12px; padding: 20px 22px; }
+  .kicker { color: #0a7c72; font-weight: 700; font-size: .9rem; }
+  h1 { margin: 2px 0 10px; font-size: 1.45rem; color: #14213d; }
+  h2 { margin: 18px 0 6px; font-size: 1.08rem; color: #14213d; }
+  h3 { margin: 12px 0 4px; font-size: 1rem; color: #14213d; }
+  p { margin: 6px 0; }
+  ul, ol { margin: 6px 0; padding-inline-start: 22px; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: .95rem; }
+  th, td { border: 1px solid #d9d5cb; padding: 7px 9px; text-align: start; vertical-align: top; }
+  th { background: #eef1f6; }
+  td.fill { background: #fffbe8; height: 2.6em; min-width: 6em; }
+  .note { color: #5b6270; font-size: .9rem; border-top: 1px solid #d9d5cb; margin-top: 16px; padding-top: 8px; }
+  .out { border: 1px solid #c9ced8; border-radius: 10px; padding: 12px 16px; margin: 10px 0 18px; background: #fbfcfe; }
+  .page { border-top: 3px solid #14213d; margin-top: 18px; padding-top: 4px; }
+  .tag { display: inline-block; background: #14213d; color: #fff; border-radius: 999px; padding: 0 10px; font-size: .82rem; }
+  .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+  .en { direction: ltr; unicode-bidi: isolate; text-align: left; }
+  button, select, textarea, input { font: inherit; }
+  textarea { width: 100%; min-height: 12em; border: 1px solid #c9ced8; border-radius: 8px; padding: 8px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; align-items: center; }
+  button { border: 1px solid #14213d; background: #14213d; color: #fff; border-radius: 8px; padding: 4px 14px; cursor: pointer; }
+  button.alt { background: #fff; color: #14213d; }
+  .pass { border-inline-start: 6px solid #0a7c72; background: #eef7f5; padding: 8px 12px; border-radius: 8px; }
+  .fail { border-inline-start: 6px solid #c0392b; background: #fdf0ee; padding: 8px 12px; border-radius: 8px; }
+  code, .marks { font-family: "IBM Plex Mono", Consolas, monospace; font-size: .9em; }
+  .marks { direction: ltr; text-align: left; display: block; background: #f1f3f7; border-radius: 6px; padding: 2px 8px; overflow-x: auto; white-space: pre; }
+  @media print { body { background: #fff; } .doc { border: 0; } }
+</style>
+</head>
+<body>
+<main>
+<div class="doc">
+<div class="kicker">هيئة شراع للثروة السمكية · المختبر 1.5 · أداة تعمل في المتصفح دون اتصال</div>
+<h1>فحص الاتجاه</h1>
+<p>افتح ملفك أو الصق نصه، ثم اضغط «فحص». الأداة تقرأ الحروف المخزَّنة في الملف، لا شكلها على الشاشة، ولا ترسل شيئًا إلى أي مكان.</p>
+<div class="bar">
+<label>الملف: <select id="which"><option value="doc">التعميم circular_bidi.txt</option><option value="slide">الشريحة slide_bidi.html</option><option value="other">نص آخر</option></select></label>
+<label>فتح ملف: <input type="file" accept=".txt,.html,.htm" onchange="load(this)"></label>
+<button onclick="run()">فحص</button>
+</div>
+<textarea id="text" dir="auto" spellcheck="false"></textarea>
+<div id="result"></div>
+<h2>علامات الاتجاه</h2>
+<p>لنسخ علامة غير مرئية إلى الحافظة ثم لصقها في المحرر:</p>
+<div class="bar">
+<button class="alt" onclick="copyMark(0x200E)">نسخ LRM</button>
+<button class="alt" onclick="copyMark(0x200F)">نسخ RLM</button>
+<span id="copied"></span>
+</div>
+<div class="scroll"><table>
+<tr><th>القاعدة</th><th>ما تبحث عنه</th><th>الإصلاح</th></tr>
+<tr><td>علامات التحكم</td><td>علامات التضمين والتجاوز القديمة، مثل <span class="ltr">RLO</span></td><td>احذفها</td></tr>
+<tr><td>حقيقة معكوسة</td><td>رقم أو رمز كُتب معكوسًا في الملف</td><td>أعد كتابته</td></tr>
+<tr><td>بداية السطر</td><td>سطر عربي يبدأ بحرف لاتيني</td><td>ابدأ بكلمة عربية أو بعلامة <span class="ltr">RLM</span></td></tr>
+<tr><td>الترقيم</td><td>فاصلة أو علامة استفهام لاتينية، أو علامة في أول السطر</td><td>، ؛ ؟ في آخر الجملة</td></tr>
+<tr><td>النطاق</td><td>رقمان بينهما شرطة ومسافتان</td><td>من … إلى …</td></tr>
+<tr><td>الإشارة</td><td>رقم بإشارة أو رقم هاتف دون عزل</td><td><span class="ltr">LRM</span> قبله في النص، أو <span class="ltr">dir="ltr"</span> في الصفحة</td></tr>
+<tr><td>الأرقام</td><td>أرقام مشرقية في مستند أرقامه 0 إلى 9</td><td>وحّد الأرقام</td></tr>
+<tr><td>في الصفحة</td><td>غياب <span class="ltr">dir="rtl"</span>، ومقطع لاتيني غير معزول، ونص عربي داخل عنصر <span class="ltr">ltr</span></td><td>السمة <span class="ltr">dir</span> على العنصر الصحيح</td></tr>
+</table></div>
+<p class="note">وثيقة تدريبية من مقرر أكاديمية سدايا USE-FLU-207. هيئة شراع للثروة السمكية جهة افتراضية، وكل الأسماء والأرقام والسياسات والرسائل فيها مختلقة لأغراض التدريب.</p>
+</div>
+</main>
+<script>
+
+var FACTS = { doc: ["2027","5,000","SFA-2027-014"], slide: ["1,250","5,000","1,960","SFA-2027-014"], other: [] };
+function directionCheck(input, kind, facts) {
+  var NAMES = { '\u202A': 'LRE U+202A', '\u202B': 'RLE U+202B', '\u202C': 'PDF U+202C', '\u202D': 'LRO U+202D', '\u202E': 'RLO U+202E',
+    '\u2066': 'LRI U+2066', '\u2067': 'RLI U+2067', '\u2068': 'FSI U+2068', '\u2069': 'PDI U+2069', '\u200E': 'LRM U+200E', '\u200F': 'RLM U+200F' };
+  var AR = /[ء-ي]/;
+  var out = [];
+  var add = function (line, rule, text) { out.push({ line: line, rule: rule, text: text }); };
+  var lineOf = function (index) { return input.slice(0, index).split('\n').length; };
+  var reverse = function (s) { return s.split('').reverse().join(''); };
+
+  /* Rules on one run of text that is laid out right to left. */
+  var textRules = function (text, line, isolatedBefore) {
+    if (!AR.test(text)) return;
+    if (/[,;?]/.test(text.replace(/\d,\d/g, '0'))) add(line, 'punct', 'علامة ترقيم لاتينية في نص عربي: استخدم ، أو ؛ أو ؟');
+    if (/^\s*[؟،؛.!:]/.test(text)) add(line, 'lead', 'علامة ترقيم في أول السطر: مكانها آخر الجملة في الترتيب المخزَّن');
+    if (/\d\s+[-\u2013]\s+\d/.test(text)) add(line, 'range', 'نطاق بشرطة بين مسافتين ينقلب طرفاه: اكتب «من … إلى …»');
+    if (/[٠-٩]/.test(text)) add(line, 'digits', 'أرقام عربية مشرقية في مستند أرقامه 0 إلى 9: وحّد الأرقام');
+    var signs = /(^|[\s(:])([+\-\u2212]\d)/g, m;
+    while ((m = signs.exec(text))) {
+      var before = text.slice(0, m.index + m[1].length);
+      var guarded = /[\u200E\u2066]$/.test(before) || (isolatedBefore && before.trim() === '');
+      if (!guarded) add(line, 'sign', 'رقم بإشارة أو رقم هاتف دون عزل: الإشارة تقفز إلى الجهة الأخرى');
+    }
+  };
+  var controls = function (text, line, allowMarks) {
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (/[\u202A-\u202E]/.test(ch)) add(line, 'control', 'علامة تحكم ' + NAMES[ch] + ': احذفها');
+      else if (!allowMarks && /[\u2066-\u2069\u200E\u200F]/.test(ch)) add(line, 'control', 'علامة اتجاه ' + NAMES[ch] + ' في صفحة: استخدم السمة dir بدلًا منها');
+    }
+  };
+  var factRule = function (text) {
+    (facts || []).forEach(function (fact) {
+      var back = reverse(fact), at = -1, from = 0, token = /[0-9A-Za-z,]/;
+      while (back !== fact && (from = text.indexOf(back, from)) >= 0) {
+        if (!token.test(text.charAt(from - 1)) && !token.test(text.charAt(from + back.length))) { at = from; break; }
+        from += 1;
+      }
+      if (at >= 0) add(text.slice(0, at).split('\n').length, 'fact', 'المتوقع «' + fact + '» والموجود معكوس «' + back + '»: أعد كتابته');
+      else if (text.indexOf(fact) < 0) add(0, 'fact', 'المتوقع «' + fact + '» وليس في الملف');
+    });
+  };
+
+  if (kind === 'doc') {
+    var open = 0;
+    input.split('\n').forEach(function (raw, i) {
+      var line = i + 1;
+      controls(raw, line, true);
+      open += (raw.match(/[\u2066-\u2068]/g) || []).length - (raw.match(/\u2069/g) || []).length;
+      var text = raw.replace(/[\u202A-\u202E\u2067-\u2069]/g, '');
+      if (AR.test(text)) {
+        var strong = text.match(/[A-Za-zء-ي\u200E\u200F]/);
+        if (strong && /[A-Za-z\u200E]/.test(strong[0])) add(line, 'first', 'السطر يبدأ بحرف لاتيني فيُعرض من اليسار: ابدأ بكلمة عربية أو بعلامة RLM');
+      }
+      textRules(text.replace(/[\u200F]/g, ''), line, false);
+    });
+    if (open !== 0) add(0, 'control', 'علامات العزل غير متوازنة: لكل LRI أو RLI علامة PDI تغلقها');
+    factRule(input.replace(/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/g, ''));
+  } else {
+    var html = input.replace(/<head[\s\S]*?<\/head>/i, function (h) { return h.replace(/[^\n]/g, ' '); })
+      .replace(/<![^>]*>/g, function (h) { return h.replace(/[^\n]/g, ' '); });
+    var root = input.match(/<html[^>]*>/i);
+    if (!root || !/dir\s*=\s*["']?rtl/i.test(root[0])) add(root ? lineOf(root.index) : 1, 'dir', 'الصفحة بلا dir="rtl" على العنصر html: كل فقراتها تُعرض من اليسار');
+    var re = /<(\/?)([a-zA-Z0-9]+)([^>]*)>|([^<]+)/g, stack = [], t;
+    while ((t = re.exec(html))) {
+      if (t[4] !== undefined) {
+        var text2 = t[4].replace(/&[a-z]+;/g, ' ');
+        if (!text2.trim()) continue;
+        var line2 = lineOf(t.index + (t[4].length - t[4].replace(/^\s+/, '').length));
+        var inLtr = stack.some(function (s) { return s.ltr; });
+        controls(text2, line2, false);
+        var clean = text2.replace(/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/g, '');
+        if (inLtr) {
+          if (AR.test(clean)) add(line2, 'ltr-arabic', 'نص عربي داخل عنصر dir="ltr": ترتيب كلماته ينقلب. اعزل المقطع اللاتيني أو الرقم وحده');
+        } else {
+          if (/[A-Za-z]/.test(clean)) add(line2, 'latin', 'مقطع لاتيني غير معزول «' + clean.match(/[A-Za-z][A-Za-z0-9.@_\-]*/)[0] + '»: ضعه في <span dir="ltr">');
+          textRules(clean, line2, false);
+          if (!AR.test(clean)) textRules('ع ' + clean, line2, false);
+        }
+      } else if (t[1]) {
+        for (var k = stack.length - 1; k >= 0; k--) { if (stack[k].tag === t[2].toLowerCase()) { stack.length = k; break; } }
+      } else if (!/^(br|img|meta|link|hr|input)$/i.test(t[2]) && !/\/\s*$/.test(t[3])) {
+        var ltr = /dir\s*=\s*["']?ltr/i.test(t[3]) || t[2].toLowerCase() === 'bdi';
+        stack.push({ tag: t[2].toLowerCase(), ltr: ltr });
+      }
+    }
+    factRule(stripTags(html));
+  }
+  return out.sort(function (a, b) { return a.line - b.line; });
+
+  function stripTags(h) { return h.replace(/<[^>]+>/g, '').replace(/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/g, ''); }
+}
+var NAMES = { 0x202A: 'LRE', 0x202B: 'RLE', 0x202C: 'PDF', 0x202D: 'LRO', 0x202E: 'RLO', 0x2066: 'LRI', 0x2067: 'RLI', 0x2068: 'FSI', 0x2069: 'PDI', 0x200E: 'LRM', 0x200F: 'RLM' };
+function shown(line) {
+  var s = '';
+  for (var i = 0; i < line.length; i++) { var c = line.charCodeAt(i); s += NAMES[c] ? '[' + NAMES[c] + ']' : line[i]; }
+  return s;
+}
+function run() {
+  var text = document.getElementById('text').value.replace(/\r\n/g, '\n');
+  var which = document.getElementById('which').value;
+  var kind = /<html|<!doctype/i.test(text) ? 'slide' : 'doc';
+  var list = directionCheck(text, kind, FACTS[which]);
+  var box = document.getElementById('result');
+  box.textContent = '';
+  var head = document.createElement('p');
+  head.className = list.length ? 'fail' : 'pass';
+  head.textContent = list.length ? 'عدد الملاحظات: ' + list.length : 'الملف يجتاز فحص الاتجاه: لا ملاحظات.';
+  box.appendChild(head);
+  var rows = text.split('\n');
+  list.forEach(function (f) {
+    var p = document.createElement('p');
+    p.textContent = (f.line ? 'السطر ' + f.line + ' · ' : 'الملف كله · ') + f.text;
+    box.appendChild(p);
+    if (f.line && kind === 'doc') { var m = document.createElement('span'); m.className = 'marks'; m.textContent = shown(rows[f.line - 1]); box.appendChild(m); }
+  });
+}
+function load(input) {
+  var file = input.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function () { document.getElementById('text').value = reader.result; run(); };
+  reader.readAsText(file, 'utf-8');
+}
+function copyMark(code) {
+  var mark = String.fromCharCode(code);
+  if (navigator.clipboard) navigator.clipboard.writeText(mark);
+  document.getElementById('copied').textContent = 'نُسخت العلامة ' + NAMES[code] + '. الصقها في المحرر حيث تريدها.';
+}
+</script>
+</body>
+</html>

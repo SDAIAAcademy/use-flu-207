@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خمس مهام لمساعدين</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "IBM Plex Sans Arabic", "IBM Plex Sans", "Segoe UI", Tahoma, sans-serif; background: #f6f4ef; color: #1c2330; line-height: 1.8; }
+  main { max-width: 820px; margin: 0 auto; padding: 18px 16px 48px; }
+  .doc { background: #fff; border: 1px solid #d9d5cb; border-radius: 12px; padding: 20px 22px; }
+  .kicker { color: #0a7c72; font-weight: 700; font-size: .9rem; }
+  h1 { margin: 2px 0 10px; font-size: 1.45rem; color: #14213d; }
+  h2 { margin: 18px 0 6px; font-size: 1.08rem; color: #14213d; }
+  h3 { margin: 12px 0 4px; font-size: 1rem; color: #14213d; }
+  p { margin: 6px 0; }
+  ul, ol { margin: 6px 0; padding-inline-start: 22px; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: .95rem; }
+  th, td { border: 1px solid #d9d5cb; padding: 7px 9px; text-align: start; vertical-align: top; }
+  th { background: #eef1f6; }
+  td.fill { background: #fffbe8; height: 2.6em; min-width: 6em; }
+  .note { color: #5b6270; font-size: .9rem; border-top: 1px solid #d9d5cb; margin-top: 16px; padding-top: 8px; }
+  .out { border: 1px solid #c9ced8; border-radius: 10px; padding: 12px 16px; margin: 10px 0 18px; background: #fbfcfe; }
+  .page { border-top: 3px solid #14213d; margin-top: 18px; padding-top: 4px; }
+  .tag { display: inline-block; background: #14213d; color: #fff; border-radius: 999px; padding: 0 10px; font-size: .82rem; }
+  .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+  .en { direction: ltr; unicode-bidi: isolate; text-align: left; }
+  button, select, textarea, input { font: inherit; }
+  textarea { width: 100%; min-height: 12em; border: 1px solid #c9ced8; border-radius: 8px; padding: 8px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; align-items: center; }
+  button { border: 1px solid #14213d; background: #14213d; color: #fff; border-radius: 8px; padding: 4px 14px; cursor: pointer; }
+  button.alt { background: #fff; color: #14213d; }
+  .pass { border-inline-start: 6px solid #0a7c72; background: #eef7f5; padding: 8px 12px; border-radius: 8px; }
+  .fail { border-inline-start: 6px solid #c0392b; background: #fdf0ee; padding: 8px 12px; border-radius: 8px; }
+  code, .marks { font-family: "IBM Plex Mono", Consolas, monospace; font-size: .9em; }
+  .marks { direction: ltr; text-align: left; display: block; background: #f1f3f7; border-radius: 6px; padding: 2px 8px; overflow-x: auto; white-space: pre; }
+  @media print { body { background: #fff; } .doc { border: 0; } }
+</style>
+</head>
+<body>
+<main>
+<div class="doc">
+<div class="kicker">هيئة شراع للثروة السمكية · المختبر 1.4</div>
+<h1>خمس مهام لمساعدين</h1>
+<p>شغّل كل مهمة على المساعدين بالأمر نفسه حرفيًّا، في محادثة جديدة لكل مهمة. لا تصحّح لأحدهما ما لا تصحّحه للآخر.</p>
+<h2>المهمة 1 · خطاب رسمي</h2>
+<p>خطاب إلى رئيس الجمعية التعاونية للصيادين من <a href="brief_season.html">بطاقة الحقائق</a>. المقياس: قائمة الخطاب من عشر نقاط.</p>
+<h2>المهمة 2 · إشعار مبسط</h2>
+<p>إشعار للصيادين من البطاقة نفسها. المقياس: قائمة الإشعار من عشر نقاط.</p>
+<h2>المهمة 3 · ترجمة إلى العربية بالمسرد</h2>
+<p>ترجمة <a href="partner_note_en.html">مذكرة الشريك</a> والمسرد المعتمد في الأمر. المقياس: مطابقة المصطلحات في المواضع الثلاثة عشر.</p>
+<h2>المهمة 4 · تفريغ نصي لرسالة صوتية باللهجة</h2>
+<p>يقرأ المدرّب أو أحد المشاركين من أهل اللهجة الرسالة <span class="ltr">V2</span> بصوته ويسجّلها على الجوال، ثم تُعطى لكل مساعد أو لأداة تفريغ نصي معتمدة. المطلوب تفريغ حرفي يُبقي كلمات المتكلم، ثم جملة بالفصحى تقول ما يطلبه. من لا تتاح له أداة صوتية يعمل على التفريغين المعدّين. المقياس: نسبة الكلمات الخاطئة مقارنة بالنص المرجعي، وهل صحّ معنى الطلب.</p>
+<div class="scroll"><table id="voice">
+<tr><th>الرسالة</th><th>اللهجة</th><th>النص المرجعي كما قاله صاحبه</th></tr>
+<tr><td><span class="ltr">V1</span></td><td>حجازية</td><td id="voice-V1">يا جماعة دحين أنا رجعت من البحر ولقيت الشبك حقي مقطوع، ومدري مين اللي سوّاها. أبغى أعرف فين أقدّم بلاغ، ولا لازم أجي المكتب بنفسي؟</td></tr>
+<tr><td><span class="ltr">V2</span></td><td>خليجية ساحلية</td><td id="voice-V2">السلام عليكم، أنا نوخذة لنج صغير، وأبي أسأل عن الحظر مال الكنعد: متى يبدي ومتى يخلص؟ وإذا طلع لي كنعد في القراقير وش أسوي فيه، أهدّه ولا أبلّغ عنه؟</td></tr>
+<tr><td><span class="ltr">V3</span></td><td>مصرية</td><td id="voice-V3">أنا شغّال على مركب في مرفأ الدانة بقالي تلات سنين، وعايز أعرف الدعم ده هيتصرف لمين بالظبط؟ لصاحب الرخصة بس ولا للعمالة اللي معاه كمان؟</td></tr>
+</table></div>
+<p>الرسائل الثلاث مكتوبة للتدريب ولم تُسجَّل من متكلمين حقيقيين. إن كان في القاعة من أهل إحدى هذه اللهجات فليصحّح صياغتها قبل قراءتها.</p>
+<h2>المهمة 5 · ملخص بتاريخين</h2>
+<p>ملخص عربي من جملتين لقسم <span class="ltr">Summary</span> والتوصية الأولى في <a href="report_review_en.html">التقرير الإنجليزي</a>، وتاريخا الحظر لعام 2027 باليوم والتقويمين. المقياس: كل رقم وكل تاريخ مطابق.</p>
+<h2>سلم الدرجات</h2>
+<div class="scroll"><table>
+<tr><th>الدرجة</th><th>المهمتان 1 و2</th><th>المهمة 3</th><th>المهمة 4</th><th>المهمة 5</th><th>المعنى</th></tr>
+<tr><td>2</td><td>9 أو 10 من 10</td><td>12 أو 13 من 13</td><td>10% أو أقل والمعنى صحيح</td><td>لا خطأ</td><td>يصلح بعد قراءتك</td></tr>
+<tr><td>1</td><td>6 إلى 8</td><td>9 إلى 11</td><td>أكثر من 10% إلى 25%</td><td>خطأ واحد</td><td>يصلح بعد تصحيحك</td></tr>
+<tr><td>0</td><td>5 أو أقل</td><td>8 أو أقل</td><td>أكثر من 25%</td><td>خطآن أو أكثر</td><td>لا يصلح دون مراجع أو مترجم</td></tr>
+</table></div>
+<p class="note">وثيقة تدريبية من مقرر أكاديمية سدايا USE-FLU-207. هيئة شراع للثروة السمكية جهة افتراضية، وكل الأسماء والأرقام والسياسات والرسائل فيها مختلقة لأغراض التدريب.</p>
+</div>
+</main>
+</body>
+</html>
